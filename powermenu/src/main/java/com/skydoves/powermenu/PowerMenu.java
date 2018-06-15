@@ -149,6 +149,10 @@ public class PowerMenu implements IMenuItem<PowerMenuItem>, LifecycleObserver {
         return menuWindow;
     }
 
+    public CardView getMenuCard() {
+        return menuCard;
+    }
+
     private OnMenuItemClickListener onMenuItemClickListener = new OnMenuItemClickListener<PowerMenuItem>() {
         @Override
         public void onItemClick(int position, PowerMenuItem item) {
