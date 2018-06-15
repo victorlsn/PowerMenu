@@ -25,6 +25,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.support.v7.view.menu.MenuView;
 import android.support.v7.widget.CardView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -138,6 +139,14 @@ public class PowerMenu implements IMenuItem<PowerMenuItem>, LifecycleObserver {
         setTouchInterceptor(onTouchListener);
 
         contentViewPadding = ConvertUtil.convertDpToPixel(10, context);
+    }
+
+    public View getMenuView() {
+        return menuView;
+    }
+
+    public PopupWindow getMenuWindow() {
+        return menuWindow;
     }
 
     private OnMenuItemClickListener onMenuItemClickListener = new OnMenuItemClickListener<PowerMenuItem>() {
